@@ -1,4 +1,4 @@
-all: dist/ilda.min.js tests
+all: dist/ilda.min.js tests examples
 
 clean:
 	rm -f build/*
@@ -34,3 +34,8 @@ test: test/test-reader.js test/test-writer.js
 	$(NODE) test/test-reader.js
 	$(NODE) test/test-writer.js
 	
+examples: examples/makecube
+
+examples/makecube: examples/makecube.js
+	$(NODE) examples/makecube.js dist/cube.ild
+
