@@ -23,13 +23,18 @@ function drawLine(section, x0,y0, x1,y1, color) {
 		color: color,
 		blanking: true,
 	});
-	section.points.push({
-		x: x1,
-		y: y1,
-		z: 0,
-		color: color,
-		blanking: false,
-	});
+	for (var l=0; l<10; l++) {
+		var t = l / 10.0;
+		var x = x0 + (x1 - x0) * t;
+		var y = y0 + (y1 - y0) * t;
+		section.points.push({
+			x: x,
+			y: y,
+			z: 0,
+			color: color,
+			blanking: false,
+		});
+	}
 }
 
 var vertices = [
@@ -109,7 +114,7 @@ function generateCubeFrame(fr) {
 	s.index = fr;
 	s.head = 1;
 	s.total = TOTALFRAMES;
-	for (var i=0; i<30; i++) {
+	for (var i=0; i<1; i++) {
 		for (var e=0; e<edges.length; e++) {
 			var edge = edges[e];
 			var s0 = rotateAndProject(vertices[edge.a], rot);
