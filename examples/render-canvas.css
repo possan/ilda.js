@@ -1,0 +1,18 @@
+body {
+	padding: 40px;
+}
+
+div#upload {
+	padding: 20px;
+	background-color: #ffc;
+	border: 2px solid #884;
+}
+
+div#upload:hover {
+	border: 6px solid #884;
+}
+
+div#screen {
+	padding: 10px;
+	background-color: #333;
+}

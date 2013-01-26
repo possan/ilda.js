@@ -135,7 +135,7 @@ Reader.fromByteArray = function(arr, callback) {
 					color.b = p.readByte();
 					section.colors.push(color);
 				}
-				break;
+					break;
 		}
 		f.sections.push(section);
 	}
