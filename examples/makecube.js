@@ -23,8 +23,8 @@ function drawLine(section, x0,y0, x1,y1, color) {
 		color: color,
 		blanking: true,
 	});
-	for (var l=0; l<10; l++) {
-		var t = l / 10.0;
+	for (var l=0; l<6; l++) {
+		var t = l / 6.0;
 		var x = x0 + (x1 - x0) * t;
 		var y = y0 + (y1 - y0) * t;
 		section.points.push({
@@ -53,14 +53,14 @@ var edges = [
 	{ a: 1, b: 2, color: 1 },
 	{ a: 2, b: 3, color: 1 },
 	{ a: 3, b: 0, color: 1 },
-	{ a: 4, b: 5, color: 2 },
-	{ a: 5, b: 6, color: 2 },
-	{ a: 6, b: 7, color: 2 },
-	{ a: 7, b: 4, color: 2 },
-	{ a: 0, b: 4, color: 3 },
-	{ a: 1, b: 5, color: 3 },
-	{ a: 2, b: 6, color: 3 },
-	{ a: 3, b: 7, color: 3 }
+	{ a: 4, b: 5, color: 72 },
+	{ a: 5, b: 6, color: 72 },
+	{ a: 6, b: 7, color: 72 },
+	{ a: 7, b: 4, color: 72 },
+	{ a: 0, b: 4, color: 123 },
+	{ a: 1, b: 5, color: 123 },
+	{ a: 2, b: 6, color: 123 },
+	{ a: 3, b: 7, color: 123 }
 ];
 
 
@@ -127,9 +127,9 @@ function generateCubeFrame(fr) {
 
 for (var i=0; i<TOTALFRAMES; i++) {
 	generateCubeFrame(i);
-	rot.x += 1.3;
+	rot.x += 2.3;
 	rot.y += 2.0;
-	rot.z += 1.8;
+	rot.z += 3.8;
 }
 
 ILDA.Writer.toByteArray(file, function(arr) {
