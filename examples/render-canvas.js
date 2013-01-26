@@ -4,12 +4,12 @@
 	var section = 0;
 	var point = 0;
 	var defaultcolors = [
-		'#f00',
-		'#0f0',
-		'#00f',
+		'#f30',
+		'#3f6',
+		'#06f',
 		'#ff0',
 		'#0ff',
-		'#f0f',
+		'#f6f',
 		'#fff'
 	];
 
